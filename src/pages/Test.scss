@@ -8,6 +8,12 @@
   font-size: calc(20px + 1vmin);
 }
 
+.logo {
+  padding-top: 20px;
+  width: 120px;
+  height: 120px;
+}
+
 .search-box {
   padding-top: 70px;
 }
@@ -18,15 +24,32 @@ input {
   border-radius: 10px;
   border: 0;
 }
-.logo {
+
+button {
+  padding: 10px;
+  letter-spacing: 1.5px;
+  color: black;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(216, 207, 207);
+}
+.button-check {
   padding-top: 20px;
-  width: 120px;
-  height: 120px;
 }
 
-.city-description {
-  padding-top: 40px;
+.date {
+  padding-top: 50px;
+  font-size: 20px;
+  letter-spacing: 0.7px;
 }
+
+// .city-description {
+//   padding-top: 5px;
+// }
 
 .p-city {
   font-size: 32px;
@@ -60,20 +83,4 @@ input {
 .pressure {
   padding-left: 50px;
   letter-spacing: 1px;
-}
-
-button {
-  padding: 10px;
-  letter-spacing: 1.5px;
-  color: black;
-  border: 0;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgb(216, 207, 207);
-}
-.button-check {
-  padding-top: 20px;
 }

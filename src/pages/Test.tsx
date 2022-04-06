@@ -72,6 +72,39 @@ export const Test: React.FC<TestProps> = () => {
     }
   };
 
+  const dateBuilder = (d: any) => {
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`;
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
   };
@@ -97,7 +130,7 @@ export const Test: React.FC<TestProps> = () => {
       <div className="button-check">
         <button>Check</button>
       </div>
-
+      <div className="date">{dateBuilder(new Date())}</div>
       {weather && (
         <div className="city-description">
           <div className="p-city" key={weather.id}>
@@ -116,7 +149,7 @@ export const Test: React.FC<TestProps> = () => {
                 <p>{weather.pressure} hPa</p>
               </div>
             </div>
-            <p>weather-main {weather.main}</p>
+            {/* <p>weather-main {weather.main}</p> */}
           </div>
         </div>
       )}
