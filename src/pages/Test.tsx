@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "./Test.scss";
 import axios from "axios";
+import {
+  WiSunrise,
+  WiSunset,
+  WiStrongWind,
+  WiThermometer,
+  WiBarometer,
+  // @ts-ignore
+} from "weather-icons-react";
 
 interface TestProps {}
 
@@ -157,33 +165,38 @@ export const Test: React.FC<TestProps> = () => {
 
             <div className="block">
               <div className="wind">
-                <p className="mini-text">Wind</p>
+                {<WiStrongWind size={30} color="#8c8991" />}
+                <p className="mini-text"> Wind</p>
                 <p>{Math.round(weather.speed)} km/h</p>
               </div>
+
               <div className="pressure">
+                {<WiBarometer size={30} color="#354c57" />}
                 <p className="mini-text">Pressure</p>
                 <p>{weather.pressure} hPa</p>
               </div>
             </div>
             <div className="high-low">
+              {<WiThermometer size={30} color="#705f3e" />}
               <p className="mini-text">High/Low</p>
               <p>
                 {Math.round(weather.temp_max)}°C/{Math.round(weather.temp_min)}
                 °C
               </p>
-              <div className="block-sunrise">
-                <div className="wind">
-                  <p className="mini-text">Sunrise</p>
-                  <p>
-                    {timeOfSunsetAndSunrise(new Date(weather.sunrise * 1000))}
-                  </p>
-                </div>
-                <div className="pressure">
-                  <p className="mini-text">Sunset</p>
-                  <p>
-                    {timeOfSunsetAndSunrise(new Date(weather.sunset * 1000))}
-                  </p>
-                </div>
+            </div>
+            <div className="block-sunrise">
+              <div className="wind">
+                {<WiSunrise size={30} color="#f5d442" />}
+                <p className="mini-text">Sunrise</p>
+                <p>
+                  {timeOfSunsetAndSunrise(new Date(weather.sunrise * 1000))}
+                </p>
+              </div>
+              <div className="pressure">
+                {<WiSunset size={30} color="#f58742" />}
+                <p className="mini-text">Sunset</p>
+
+                <p>{timeOfSunsetAndSunrise(new Date(weather.sunset * 1000))}</p>
               </div>
             </div>
           </div>
