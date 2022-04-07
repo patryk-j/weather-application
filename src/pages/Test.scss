@@ -58,14 +58,8 @@ button:hover {
   letter-spacing: 0.7px;
 }
 
-.mini-text {
-  font-size: 15px;
-  letter-spacing: 0.7px;
-  padding-bottom: 3px;
-}
-
 .p-temperature {
-  font-size: 30px;
+  font-size: 34px;
   padding-bottom: 20px;
   letter-spacing: 0.7px;
 }
@@ -74,13 +68,41 @@ button:hover {
   font-size: 18px;
   letter-spacing: 0.7px;
 }
+
 .block {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 21px;
 }
 
 .pressure {
   padding-left: 50px;
   letter-spacing: 1px;
+  font-size: 21px;
+}
+
+.wind {
+  letter-spacing: 1px;
+  font-size: 21px;
+}
+
+.mini-text {
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  padding-bottom: 3px;
+}
+
+.high-low {
+  padding-top: 20px;
+  font-size: 21px;
+  padding-bottom: 20px;
+}
+
+.block-sunrise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 21px;
 }

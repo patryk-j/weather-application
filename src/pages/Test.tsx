@@ -12,6 +12,10 @@ interface City {
   speed: number;
   pressure: number;
   main: string;
+  temp_min: number;
+  temp_max: number;
+  sunrise: number;
+  sunset: number;
 }
 
 interface Weather {
@@ -20,9 +24,13 @@ interface Weather {
   main: {
     temp: number;
     pressure: number;
+    temp_max: number;
+    temp_min: number;
   };
   sys: {
     country: string;
+    sunrise: number;
+    sunset: number;
   };
   wind: {
     speed: number;
@@ -51,9 +59,7 @@ export const Test: React.FC<TestProps> = () => {
   const searchLocation = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Enter") {
       axios
-        .get(
-          `${api.base}weather?q=${query}&units=metric&lang=pl&appid=${api.key}`
-        )
+        .get(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
         .then((response: Response) => {
           setWeather({
             id: response.data.id,
@@ -63,6 +69,10 @@ export const Test: React.FC<TestProps> = () => {
             country: response.data.sys.country,
             speed: response.data.wind.speed,
             main: response.data.weather.main,
+            temp_min: response.data.main.temp_min,
+            temp_max: response.data.main.temp_max,
+            sunrise: response.data.sys.sunrise,
+            sunset: response.data.sys.sunset,
           });
           console.log(response);
           setQuery("");
@@ -70,6 +80,10 @@ export const Test: React.FC<TestProps> = () => {
           // setLoading(false);
         });
     }
+  };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
   };
 
   const dateBuilder = (d: any) => {
@@ -105,8 +119,10 @@ export const Test: React.FC<TestProps> = () => {
     return `${day} ${date} ${month} ${year}`;
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value);
+  const timeOfSunsetAndSunrise = (timeOfSunsetAndSunrise: any) => {
+    let hours = timeOfSunsetAndSunrise.getHours();
+    let minutes = timeOfSunsetAndSunrise.getMinutes();
+    return `${hours}:${minutes}`;
   };
 
   // useEffect(() => {
@@ -141,15 +157,35 @@ export const Test: React.FC<TestProps> = () => {
 
             <div className="block">
               <div className="wind">
-                <p className="mini-text">Wiatr</p>
+                <p className="mini-text">Wind</p>
                 <p>{Math.round(weather.speed)} km/h</p>
               </div>
               <div className="pressure">
-                <p className="mini-text">Ciśnienie</p>
+                <p className="mini-text">Pressure</p>
                 <p>{weather.pressure} hPa</p>
               </div>
             </div>
-            {/* <p>weather-main {weather.main}</p> */}
+            <div className="high-low">
+              <p className="mini-text">High/Low</p>
+              <p>
+                {Math.round(weather.temp_max)}°C/{Math.round(weather.temp_min)}
+                °C
+              </p>
+              <div className="block-sunrise">
+                <div className="wind">
+                  <p className="mini-text">Sunrise</p>
+                  <p>
+                    {timeOfSunsetAndSunrise(new Date(weather.sunrise * 1000))}
+                  </p>
+                </div>
+                <div className="pressure">
+                  <p className="mini-text">Sunset</p>
+                  <p>
+                    {timeOfSunsetAndSunrise(new Date(weather.sunset * 1000))}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
