@@ -17,7 +17,7 @@ Weather App is a simple application to check weather conditions around the world
 
 ## Getting started
 
-If you want, you can test the weather application at the link: or just clone the repository (instructions below), install and run the application, then you can enjoy the possibility of checking current weather data.
+If you want, you can test the weather application at the link: https://weather-applicatioonn.herokuapp.com/ or just clone the repository (instructions below), install and run the application, then you can enjoy the possibility of checking current weather data.
 
 ## Installation
 
