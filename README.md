@@ -1,7 +1,7 @@
 # `Weather-App`
 
 <p align="center">
-  <img src="http://www.fillmurray.com/460/300](https://firebasestorage.googleapis.com/v0/b/course-app-fb4f5.appspot.com/o/weatherapp.PNG?alt=media&token=217c2601-7b1e-4caf-9277-ab36342c295f">
+  <img src="(https://firebasestorage.googleapis.com/v0/b/course-app-fb4f5.appspot.com/o/weatherapp.PNG?alt=media&token=217c2601-7b1e-4caf-9277-ab36342c295f">
 </p>
 ![homepage](https://firebasestorage.googleapis.com/v0/b/course-app-fb4f5.appspot.com/o/weatherapp.PNG?alt=media&token=217c2601-7b1e-4caf-9277-ab36342c295f)
 
