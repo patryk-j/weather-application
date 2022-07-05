@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Test.scss";
+import "./HomePage.scss";
 import axios from "axios";
 import {
   WiSunrise,
@@ -59,7 +59,7 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-export const Test: React.FC<TestProps> = () => {
+export const HomePage: React.FC<TestProps> = () => {
   const [weather, setWeather] = useState<null | City>(null);
   const [query, setQuery] = useState("");
   // const [loading, setLoading] = useState(true);
@@ -151,9 +151,9 @@ export const Test: React.FC<TestProps> = () => {
           autoComplete="on"
         />
       </div>
-      <div className="button-check">
+      {/* <div className="button-check">
         <button>Check</button>
-      </div>
+      </div> */}
       <div className="date">{dateBuilder(new Date())}</div>
       {weather && (
         <div className="city-description">
@@ -171,7 +171,7 @@ export const Test: React.FC<TestProps> = () => {
               </div>
 
               <div className="pressure">
-                {<WiBarometer size={30} color="#354c57" />}
+                {<WiBarometer size={30} color="#195380" />}
                 <p className="mini-text">Pressure</p>
                 <p>{weather.pressure} hPa</p>
               </div>

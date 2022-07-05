@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# `Weather-App`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![homepage](https://firebasestorage.googleapis.com/v0/b/course-app-fb4f5.appspot.com/o/weatherapp.PNG?alt=media&token=217c2601-7b1e-4caf-9277-ab36342c295f)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Weather App is a simple application to check weather conditions around the world. After entering the name of the in any language, we get current information about: temperature, wind, pressure, highest / lowest temperature and sunrise and sunset times.
 
-### `npm start`
+## Built with
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React.js](https://pl.reactjs.org/) ^17.0.2
+- [TypeScript](https://www.typescriptlang.org/) ^4.6.2
+- [axios](https://www.npmjs.com/package/axios) ^0.26.1
+- [weather-icons-react](https://mui.com/) ^1.2.0
+- [node-saas](https://www.npmjs.com/package/node-sass) ^7.0.1
+- [Node](https://nodejs.org/en/) ^16.11.26
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting started
 
-### `npm test`
+If you want, you can test the weather application at the link: or just clone the repository (instructions below), install and run the application, then you can enjoy the possibility of checking current weather data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```txt
+   git clone https://github.com/patryk-j/weather-app/
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install requierd packages using npm:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```txt
+   npm install
+   ```
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To run the application simply paste and run the following command:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```txt
+    npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Distributed under the MIT License. See `LICENSE.txt`

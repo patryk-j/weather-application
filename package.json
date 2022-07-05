@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/requirejs": "^2.1.34"
+    "@types/requirejs": "^2.1.34",
+    "gh-pages": "^4.0.0"
   }
 }
