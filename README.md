@@ -6,7 +6,7 @@
 
 ## Description
 
-Weather App is a simple application to check weather conditions around the world. After entering the name of the in any language, we get current information about: temperature, wind, pressure, highest / lowest temperature and sunrise and sunset times.
+Weather App is a simple application to check weather conditions around the world. After entering the name in any language, we get current information about: temperature, wind, pressure, highest / lowest temperature and sunrise and sunset times. Weather data download app uses openweathermap.org/api
 
 ## Built with
 
